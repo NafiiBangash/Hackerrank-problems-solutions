@@ -1,0 +1,38 @@
+//Problem
+/*
+Input Format
+
+You will be given two positive integers,  and  (), separated by a newline.
+
+Output Format
+
+For each integer  in the inclusive interval :
+
+If , then print the English representation of it in lowercase. That is "one" for , "two" for , and so on.
+Else if  and it is an even number, then print "even".
+Else if  and it is an odd number, then print "odd".
+*/
+//Solution Code
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, y;
+    cin >> x >> y;
+
+    string words[] = { "", "one", "two", "three", "four", "five", 
+                       "six", "seven", "eight", "nine" };
+
+    
+    for(int i=x;i<=y;i++){
+        if (i>=1 && i<=9) {
+         cout << words[i]<<endl;
+        }else if (i%2==0) {
+         cout<< "even"<<endl;
+        }else {
+        cout<< "odd"<<endl;
+        }
+     }
+
+    return 0;
+}
